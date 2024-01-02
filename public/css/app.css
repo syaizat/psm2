@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600&display=swap');
+
+*,::after,::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* MAIN STYLE */
+
+.card {
+    width: auto;
+    height: auto;
+    padding: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    overflow: hidden;
+    background: #fafbff;
+}
+
+.card .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.card p {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #878a9a;
+}
+
+.card button {
+    outline: 0;
+    border: 0;
+        -webkit-appearence: none;
+	background: #5256ad;
+	color: #fff;
+	border-radius: 4px;
+	transition: 0.3s;
+	cursor: pointer;
+	font-weight: 400;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+	font-size: 0.8rem;
+	padding: 8px 13px;
+}
+
+.card button:hover {
+	opacity: 0.8;
+}
+
+.card button:active {
+	transform: translateY(5px);
+}
+
+.card .drag-area {
+	width: 100%;
+	height: 160px;
+	border-radius: 5px;
+	border: 2px dashed #d5d5e1;
+	color: #c8c9dd;
+	font-size: 0.9rem;
+	font-weight: 500;
+	position: relative;
+	background: #dfe3f259;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	user-select: none;
+	-webkit-user-select: none;
+	margin-top: 10px;
+}
+
+.card .drag-area .visible {
+	font-size: 18px;
+}
+.card .select {
+    color: #5256ad;
+	margin-left: 5px;
+	cursor: pointer;
+	transition: 0.4s;
+}
+
+.card .select:hover {
+	opacity: 0.6;
+}
+
+.card .container {
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	max-height: 500px;
+	overflow-y: auto;
+	margin-top: 10px;
+}
+
+.card .container .image {
+	width: calc(26% - 19px);
+	margin-right: 1px;
+	height: auto;
+	position: relative;
+	margin-bottom: 8px;
+}
+
+.card .container .image img {
+	width: 100%;
+	height: auto;
+    display: block;
+}
+
+.card .container .image span {
+	position: absolute;
+	top: -2px;
+	right: 9px;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+/* dragover class will used in drag and drop system */
+.card .drag-area.dragover {
+	background: rgba(0, 0, 0, 0.4);
+}
+
+.card .drag-area.dragover .on-drop {
+	display: inline;
+	font-size: 28px;
+}
+
+.card input,
+.card .drag-area .on-drop, 
+.card .drag-area.dragover .visible {
+	display: none;
+}
+
+/* upload */
+
+#progressBarContainer {
+    width: 100%;
+    background-color: #f1f1f1;
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+
+#progressBar {
+    width: 0%;
+    height: 30px;
+    background-color: #4caf50;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+}
+
+/* secret code */
+
+#key{
+	font: inherit;
+	border-radius: 4px;
+    display: flex;
+    width: 200px;
+    flex-direction: row;
+    margin-right: 20px;
+	margin-left: auto;
+	padding: 4px;
+	text-transform: uppercase;
+	border: 1px solid #eee;
+	box-shadow: 0 0 6px -2px rgba(0,0,0,0.3);
+}
+
+#key::placeholder {
+    text-transform: capitalize;
+}
+
+#secretmessage{
+	font: inherit;
+	border-radius: 4px;
+    display: flex;
+    width: 600px;
+    flex-direction: row;
+    margin-right: 20px;
+	margin-left: auto;
+	padding: 4px;
+	border: 1px solid #eee;
+	box-shadow: 0 0 6px -2px rgba(0,0,0,0.3);
+}
