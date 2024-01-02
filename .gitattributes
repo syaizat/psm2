@@ -5,8 +5,9 @@
 *.html diff=html
 *.md diff=markdown
 *.php diff=php
+*.symlink text eol=lf
 
 /.github export-ignore
 CHANGELOG.md export-ignore
 .styleci.yml export-ignore\
-*.symlink text eol=lf
+
